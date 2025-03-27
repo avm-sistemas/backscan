@@ -1,0 +1,33 @@
+{
+  "name": "backscan",
+  "version": "1.0.0",
+  "description": "Telegram Location",
+  "keywords": [
+    "backscan",
+    "telegram",
+    "locator",
+    "gps"
+  ],
+  "homepage": "https://github.com/avm-sistemas/backscan#readme",
+  "bugs": {
+    "url": "https://github.com/avm-sistemas/backscan/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avm-sistemas/backscan.git"
+  },
+  "license": "ISC",
+  "author": "Pedro H Bessa",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "axios": "^1.8.4",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}
