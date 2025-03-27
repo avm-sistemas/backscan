@@ -1,5 +1,4 @@
 // server.js
-const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const axios = require("axios");
@@ -30,6 +29,8 @@ app.post("/send-location", async (req, res) => {
   const { latitude, longitude } = req.body;
 
   const message = `A localização do usuário é:\nLatitude: ${latitude}\nLongitude: ${longitude}`;
+
+  analytics.logEvent('tracking_user', { name: 'user_localization', latitude: latitude, longitude: longitude });
 
   try {
     // Envia a localização para o Telegram
