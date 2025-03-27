@@ -4,7 +4,22 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const axios = require("axios");
 
-const app = express();
+const initializeApp = require("firebase/app");
+const getAnalytics = require("firebase/analytics");
+
+const firebaseConfig = {
+  apiKey: "your-api-key",
+  authDomain: "your-auth-domain.firebaseapp.com",
+  projectId: "your-projectId",
+  storageBucket: "your-storage-bucket.firebasestorage.app",
+  messagingSenderId: "your-messaging-sender-id",
+  appId: "your-app-id",
+  measurementId: "your-analytics-tag"
+};
+
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
 app.use(cors());
 app.use(bodyParser.json());
 
